@@ -7,4 +7,4 @@ fill in your login in the login() ex: login('joe@gmail.com', 'password')
 run the script
 it will learn your words and complete your memrise task
 
-*simple html version still not done*
+*simple html wrapper version still not done*
