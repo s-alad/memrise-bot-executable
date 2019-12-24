@@ -1,8 +1,6 @@
 #MEMRISE SOLVER BOT#
 
 AUTOMATICALLY LEARNS WORDS FOR YOU AND THEN SOLVES QUESTIONS
-YOU NEED 
-  -password
-  -username
-  -link of your activity
-tada
+run the python script
+input your sign in details and the link of the activity you want
+get ez points
