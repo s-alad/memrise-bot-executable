@@ -116,14 +116,16 @@ def main():
                             driver.find_elements_by_class_name('word')[x+i].click()
                 next()
                 continue
-        except: pass
+        except: 
+            try: next()
+            except: pass
         #===================================================================================================================================
         print('no prompt found and no question found')
 #===========================================================================================================================================
 if __name__ == '__main__':
-    username = str(input('username >>'))
-    password = str(input('password >>'))
-    website = str(input('link >>'))
+    username = str(input('username >> '))
+    password = str(input('password >> '))
+    website = str(input('link >> '))
     print(username, password, website)
     for i in range(100):
         options = webdriver.ChromeOptions()
