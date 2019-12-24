@@ -1,4 +1,4 @@
-import selenium; import time; import langdetect; import googletrans; import fuzzywuzzy; import random; import cgi; import os
+import selenium; import time; import langdetect; import googletrans; import fuzzywuzzy; import random; import os
 from fuzzywuzzy  import fuzz
 from googletrans import Translator
 from langdetect  import detect
@@ -121,15 +121,17 @@ def main():
         print('no prompt found and no question found')
 #===========================================================================================================================================
 if __name__ == '__main__':
+    username = str(input('username >>'))
+    password = str(input('password >>'))
+    website = str(input('link >>'))
+    print(username, password, website)
     for i in range(100):
         options = webdriver.ChromeOptions()
         options.add_argument("--mute-audio")
         #getting the webdriver component and opening the website----------------------------------------------------------------------------
-        website='https://www.memrise.com/course/5572813/francais-3/garden/speed_review/?source_element=course_mode&source_screen=course_details'
         driver = webdriver.Chrome(options=options)
         driver.get(website)
         path = os.getcwd()
-        form = cgi.FieldStorage()
         #initializing dictionaries for the correct translations-----------------------------------------------------------------------------
         translationsF2E = open(path+'\\assets\\translationsF2E.txt', 'r+')
         translationsE2F = open(path+'\\assets\\translationsE2F.txt', 'r+')
@@ -139,7 +141,7 @@ if __name__ == '__main__':
         translationsE2F.close()
         #logging in-------------------------------------------------------------------------------------------------------------------------
         cookie()
-        logIn('yourusername', 'yourpassword')
+        logIn(username, password)
         mute()
         main()
         driver.quit()
