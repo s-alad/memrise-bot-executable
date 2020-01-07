@@ -1,5 +1,5 @@
 #MEMRISE SOLVER BOT#
-this is the exe application versoin of a python script for memrise. (python script : https://github.com/veryepicsalad/memrise-bot-script)
+this is the exe application version of a python script for memrise. (python script : https://github.com/veryepicsalad/memrise-bot-script)
 
 HOW TO USE IT:
 - you must have chrome!!!
